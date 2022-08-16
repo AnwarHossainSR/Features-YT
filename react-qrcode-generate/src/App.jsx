@@ -18,7 +18,7 @@ const App = () => {
     console.log(qrCodeURL);
     let aEl = document.createElement('a');
     aEl.href = qrCodeURL;
-    aEl.download = 'QR_Code.png';
+    aEl.download = `${Date.now()}_QR_Code.png`;
     document.body.appendChild(aEl);
     aEl.click();
     document.body.removeChild(aEl);
